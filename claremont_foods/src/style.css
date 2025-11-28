@@ -1,0 +1,189 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #fafafa;
+  color: #222;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding-top: 10px;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.header p {
+  max-width: 700px;
+  margin: 10px auto;
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+/* TICKET GRID */
+.ticket-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* CARD */
+.ticket-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 10px 10px 10px rgb(114, 114, 247);
+  text-align: center;
+  transition: 0.25s ease;
+  border-color: rgb(4, 4, 210);
+  background-color: rgb(185, 185, 243);
+  border: 2px solid blue
+}
+
+.ticket-card:hover {
+  transform: translateY(-8px);
+  background-color: rgb(154, 154, 250);
+}
+
+/* Featured Tier */
+.ticket-card.featured {
+  border: 3px solid #e67e22;
+  background: #fff9f2;
+}
+
+/* Tier Name */
+.tier-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Price */
+.tier-price {
+  font-size: 2rem;
+  color: #e67e22;
+  margin: 10px 0;
+}
+
+/* Benefits */
+.benefits {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.benefits li {
+  padding: 5px 0;
+  font-size: 0.90rem;
+}
+
+/* Favourite Button */
+.fav-btn {
+  margin-top: 10px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.fav-btn.active {
+  background: #e67e22;
+  color: white;
+}
+
+.fav-btn:hover {
+  opacity: 0.8;
+}
+#app {
+    display: grid;
+    padding: 0 2rem;
+}
+.filter-btn, .btn-notify {
+    margin-top: 10px;
+    padding: 10px 18px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: #e67e22;
+    cursor: pointer;
+    transition: 0.2s;
+   
+}
+.filter-btn:hover, .btn-notify:hover {
+    background-color: #fbc494;
+    color: black;
+    cursor: pointer;
+}
+
+.dark-mode {
+  background: #111;
+  color: #eee;
+}
+
+/* Header text in dark mode */
+.dark-mode .header p {
+  color: #ccc;
+}
+
+/* Ticket card in dark mode */
+.dark-mode .ticket-card {
+  background: #1a1a1a;
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.05);
+  color: #eee;
+}
+
+/* Featured tier */
+.dark-mode .ticket-card.featured {
+  border-color:#e67e22;
+  background: #1f1405;
+}
+
+/* Price color */
+.dark-mode .tier-price {
+  color: #e67e22;
+}
+
+/* Favourite button */
+.dark-mode .fav-btn {
+  background: #444;
+  color: #eee;
+}
+
+.dark-mode .fav-btn.active {
+  background: #e67e22;
+  color: #111;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  margin-top: 20px;
+  padding: 10px 18px;
+  border: none;
+  background: #333;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  opacity: 0.85;
+}
+
+/* Dark mode version of toggle */
+.dark-mode .theme-toggle {
+  background: #e67e22;
+  color: black;
+}

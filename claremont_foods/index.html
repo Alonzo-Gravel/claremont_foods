@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css">
+    <title>Cape Town Food Fest — Tickets</title>
+  </head>
+  <body>
+
+    <div id="app">
+      <header class="header">
+            <h1 class="title">Cape Town Food Fest 2025</h1>
+            <p class="subtitle">
+                Join us for a weekend of food, music, chefs & unforgettable vibes.
+                Explore our ticket tiers and find your perfect festival experience.
+            </p>
+        </header>
+
+        <!-- ⭐ TICKET CARD GRID (Vue will render TicketCard.vue here) -->
+        <section class="ticket-section">
+            <div class="ticket-grid">
+                <TicketCard
+                    v-for="tier in ticketTiers"
+                    :key="tier.id"
+                    :name="tier.name"
+                    :price="tier.price"
+                    :benefits="tier.benefits"
+                    :featured="tier.featured"
+                    :isFavorited="tier.isFavorited"
+                    @toggle-favorite="toggleFavorite(tier.id)"
+                />
+            </div>
+        </section>
+
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
